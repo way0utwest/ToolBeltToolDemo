@@ -1,0 +1,2660 @@
+<?xml version="1.0"?>
+<!--Data Masker DMSMasking Set-->
+<DMSSetContainer_MaskingSet>
+  <DMSVersion Value="6.3.2.2887" />
+  <MaskingSetId>W4npyo3Kx0O51ryRYp5jEwbsdMTsAoFLsZik5jR1seQ=</MaskingSetId>
+  <MaskingSetOptions>
+    <maskingSetNotesTitle Value="Comments and Notes" />
+    <maskingSetNotesComments Value="Comments and notes are displayed here.&#xD;&#xA;&#xD;&#xA;Use the Edit button on the Misc. Setup tab to change this information or to prevent it from being shown." />
+    <ShowNotesOnSetLoad Value="False" />
+    <NoShowSaveFeedback Value="False" />
+    <TestConnBeforeRunningSet Value="False" />
+    <EnableANDClausesOnT2TRules Value="False" />
+    <EnableAdvancedRuleTools Value="False" />
+    <SuppressNoRowsInStage2Warnings Value="False" />
+    <PermitCrossInstanceRules Value="False" />
+    <PermitCrossSchemaSyncMgrRules Value="False" />
+    <PermitCrossSchemaT2TRules Value="True" />
+    <Treat19000101AsEmptyDate Value="False" />
+    <AutoCreateStatsTables Value="True" />
+    <AutoTruncateStatsTables Value="True" />
+    <EnableDeltaMarkers Value="True" />
+    <PutSetNameInWindowTitle Value="False" />
+    <CreateNewLogFileOnEachRun Value="False" />
+    <PermitIsNullsToBeForcedOff Value="False" />
+    <numWorkerThreads Value="2" />
+    <SpeedOrMemoryTradeoff Value="SPEEDORMEMORY_WANTSPEED" />
+    <DoNotUseTransactions Value="False" />
+    <AutoEmitRuleStatisticsReportToLog Value="True" />
+    <AutoEmitRuleStatisticsReportToFile Value="True" />
+    <AutoEmitRuleStatisticsReportDirectory Value="C:\Users\way0u\Documents\Data Masker(SqlServer)\Reports" />
+    <AutoEmitTableStatsReportToLog Value="True" />
+    <AutoEmitTableStatsReportToFile Value="True" />
+    <AutoEmitTableStatsReportDirectory Value="C:\Users\way0u\Documents\Data Masker(SqlServer)\Reports" />
+  </MaskingSetOptions>
+  <DMSSetContainer>
+    <DMSRuleBindingList>
+      <RuleController>
+        <DMSRule>
+          <RuleBlock Value="01" />
+          <RuleNumber Value="0001" />
+          <RuleSubscript Value="-01" />
+          <IsDisabled Value="False" />
+          <IsBulk Value="False" />
+          <WantMultipleActiveResultSets Value="False" />
+          <IsManagedRule Value="False" />
+          <CommitFreq Value="1000" />
+          <SerializedParentRuleID Value="00-0000-00" />
+          <Description Value="" />
+          <ExpandedState Value="False" />
+          <ForceIsNullsOff Value="False" />
+          <UserSpecifiedRIDIndexEnabled Value="False" />
+          <UserSpecifiedRIDIndex Value="" />
+        </DMSRule>
+        <DMSSchemaEntity_Login NS="DMS_Common" AS="DMSO">
+          <N2KSQLServerEntity_Login>
+            <N2KSQLServerEntity />
+            <ServerName Value="dkrSpectre\SQL2017" />
+            <AuthenticationMode Value="Windows_Authentication" />
+            <UserName Value="" />
+            <RememberPassword Value="False" />
+            <WantCloudConnection Value="False" />
+            <ConnectionTimeout Value="5" />
+            <DatabaseName Value="st_maskdev" />
+            <SchemaName Value="dbo" />
+            <OnlyTablesWithRowsWereFetched Value="False" />
+            <SchemaTables>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="AppLogger" />
+                  <RowCountInDB Value="1000" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="LogDate" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="datetime2" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="LogCat" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="2" />
+                        <CharacterMaximumLength Value="100" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="LogMsg" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="3" />
+                        <CharacterMaximumLength Value="-1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="readflag" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="bit" />
+                        <OrdinalPosition Value="4" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Completed" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="bit" />
+                        <OrdinalPosition Value="5" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="ArticlePayment" />
+                  <RowCountInDB Value="257" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ArticlePaymentKey" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ArticleID" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="2" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ContactID" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="3" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="PublishDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="date" />
+                        <OrdinalPosition Value="4" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="PaymentDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="date" />
+                        <OrdinalPosition Value="5" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="AuthorPaid" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="bit" />
+                        <OrdinalPosition Value="6" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ArticlePaymentRate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="numeric" />
+                        <OrdinalPosition Value="7" />
+                        <NumericPrecision Value="10" />
+                        <NumericScale Value="2" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="Articles" />
+                  <RowCountInDB Value="257" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ArticlesID" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="AuthorID" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="2" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Title" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="char" />
+                        <OrdinalPosition Value="3" />
+                        <CharacterMaximumLength Value="142" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Description" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="4" />
+                        <CharacterMaximumLength Value="-1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Article" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="5" />
+                        <CharacterMaximumLength Value="-1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="PublishDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="datetime" />
+                        <OrdinalPosition Value="6" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ModifiedDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="datetime" />
+                        <OrdinalPosition Value="7" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="URL" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="char" />
+                        <OrdinalPosition Value="8" />
+                        <CharacterMaximumLength Value="200" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Comments" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="((0))" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="9" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ReadingTimeEstimate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="time" />
+                        <OrdinalPosition Value="10" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="CreatedDate" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="datetime2" />
+                        <OrdinalPosition Value="11" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ModifiedBy" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="(suser_name())" />
+                        <DataType Value="nvarchar" />
+                        <OrdinalPosition Value="12" />
+                        <CharacterMaximumLength Value="200" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="Blog_Archive" />
+                  <RowCountInDB Value="62" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogArchiveID" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogID" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="2" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogName" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="3" />
+                        <CharacterMaximumLength Value="200" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ModDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="datetime2" />
+                        <OrdinalPosition Value="4" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="CrDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="datetime2" />
+                        <OrdinalPosition Value="5" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Tagline" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="6" />
+                        <CharacterMaximumLength Value="200" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogURL" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="7" />
+                        <CharacterMaximumLength Value="200" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="BlogContent" />
+                  <RowCountInDB Value="1000" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogContentKey" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogID" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="2" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogEntryTitle" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="3" />
+                        <CharacterMaximumLength Value="200" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogEntry" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="4" />
+                        <CharacterMaximumLength Value="-1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogContentStatus" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="5" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="Blogs" />
+                  <RowCountInDB Value="200" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogID" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogName" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="2" />
+                        <CharacterMaximumLength Value="200" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="modifieddate" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="(sysdatetime())" />
+                        <DataType Value="datetime2" />
+                        <OrdinalPosition Value="3" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="createdate" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="(sysdatetime())" />
+                        <DataType Value="datetime2" />
+                        <OrdinalPosition Value="4" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogTagline" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="5" />
+                        <CharacterMaximumLength Value="300" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogURL" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="6" />
+                        <CharacterMaximumLength Value="300" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="Contacts" />
+                  <RowCountInDB Value="256" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ContactsID" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ContactFullName" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="nvarchar" />
+                        <OrdinalPosition Value="2" />
+                        <CharacterMaximumLength Value="100" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="PhoneWork" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="nvarchar" />
+                        <OrdinalPosition Value="3" />
+                        <CharacterMaximumLength Value="25" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="PhoneMobile" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="nvarchar" />
+                        <OrdinalPosition Value="4" />
+                        <CharacterMaximumLength Value="25" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Address1" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="nvarchar" />
+                        <OrdinalPosition Value="5" />
+                        <CharacterMaximumLength Value="128" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Address2" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="nvarchar" />
+                        <OrdinalPosition Value="6" />
+                        <CharacterMaximumLength Value="128" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Address3" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="nvarchar" />
+                        <OrdinalPosition Value="7" />
+                        <CharacterMaximumLength Value="128" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="CountryCode" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="nvarchar" />
+                        <OrdinalPosition Value="8" />
+                        <CharacterMaximumLength Value="4" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="JoiningDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="datetime" />
+                        <OrdinalPosition Value="9" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ModifiedDate" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="(sysdatetime())" />
+                        <DataType Value="datetime" />
+                        <OrdinalPosition Value="10" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Email" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="nvarchar" />
+                        <OrdinalPosition Value="11" />
+                        <CharacterMaximumLength Value="256" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Photo" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="image" />
+                        <OrdinalPosition Value="12" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ModifiedBy" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="13" />
+                        <CharacterMaximumLength Value="50" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="StatusID" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="tinyint" />
+                        <OrdinalPosition Value="14" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="CountryCodes" />
+                  <RowCountInDB Value="140" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="CountryName" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="nvarchar" />
+                        <OrdinalPosition Value="1" />
+                        <CharacterMaximumLength Value="255" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="CountryCode" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="nvarchar" />
+                        <OrdinalPosition Value="2" />
+                        <CharacterMaximumLength Value="4" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ModifiedDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="(getdate())" />
+                        <DataType Value="datetime2" />
+                        <OrdinalPosition Value="3" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="customer" />
+                  <RowCountInDB Value="1000" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="customerid" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="CustomerName" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="2" />
+                        <CharacterMaximumLength Value="200" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="CustomerLocation" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="3" />
+                        <CharacterMaximumLength Value="200" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="orders" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="money" />
+                        <OrdinalPosition Value="4" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="region" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="5" />
+                        <CharacterMaximumLength Value="20" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="OrderDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="date" />
+                        <OrdinalPosition Value="6" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="EmailErrorLog" />
+                  <RowCountInDB Value="200" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="emailid" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="EmailDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="datetime2" />
+                        <OrdinalPosition Value="2" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="errormsg" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="3" />
+                        <CharacterMaximumLength Value="-1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="reviewed" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="bit" />
+                        <OrdinalPosition Value="4" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="EmailMessage_Archive" />
+                  <RowCountInDB Value="300" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="EmailID" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="emailsent" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="tinyint" />
+                        <OrdinalPosition Value="2" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="archivedate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="datetime" />
+                        <OrdinalPosition Value="3" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="EmailMessages" />
+                  <RowCountInDB Value="1000" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="EmailID" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="EmailReceipients" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="2" />
+                        <CharacterMaximumLength Value="1000" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Subject" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="3" />
+                        <CharacterMaximumLength Value="300" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="EmailMsg" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="4" />
+                        <CharacterMaximumLength Value="-1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="emailsent" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="tinyint" />
+                        <OrdinalPosition Value="5" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="SentDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="datetime2" />
+                        <OrdinalPosition Value="6" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="EmailCC" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="7" />
+                        <CharacterMaximumLength Value="1000" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="EventLogger" />
+                  <RowCountInDB Value="1000" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="LogId" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="LogMsg" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="2" />
+                        <CharacterMaximumLength Value="-1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="LogDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="(sysdatetime())" />
+                        <DataType Value="datetime2" />
+                        <OrdinalPosition Value="3" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="LogUser" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="(user_name())" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="4" />
+                        <CharacterMaximumLength Value="200" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="MyTable" />
+                  <RowCountInDB Value="0" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="MyTableKey" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="Ratings" />
+                  <RowCountInDB Value="1000" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="RatingKey" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ArticlesID" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="2" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="RatingDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="datetime2" />
+                        <OrdinalPosition Value="3" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Rating" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="tinyint" />
+                        <OrdinalPosition Value="4" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="UserKey" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="5" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="RSSFeeds" />
+                  <RowCountInDB Value="10" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="RSSFeedID" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="FeedName" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="2" />
+                        <CharacterMaximumLength Value="-1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Checked" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="((0))" />
+                        <DataType Value="bit" />
+                        <OrdinalPosition Value="3" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="FeedBurner" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="bit" />
+                        <OrdinalPosition Value="4" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ModifiedDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="datetime2" />
+                        <OrdinalPosition Value="5" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="Status" />
+                  <RowCountInDB Value="10" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Statusid" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Status" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="2" />
+                        <CharacterMaximumLength Value="50" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ModifiedDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="datetime2" />
+                        <OrdinalPosition Value="3" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Active" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="bit" />
+                        <OrdinalPosition Value="4" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+              <DMSSchemaEntity_Table NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Table>
+                  <N2KSQLServerEntity />
+                  <TableName Value="Users" />
+                  <RowCountInDB Value="1000" />
+                  <IsTmp Value="False" />
+                  <IsGTmp Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="UserID" />
+                        <IsNullable Value="False" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Username" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="2" />
+                        <CharacterMaximumLength Value="200" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="FullName" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="3" />
+                        <CharacterMaximumLength Value="500" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="NTAuthAccount" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="4" />
+                        <CharacterMaximumLength Value="300" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="modifieddate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="datetime" />
+                        <OrdinalPosition Value="5" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="modifiedby" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="6" />
+                        <CharacterMaximumLength Value="200" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Table>
+                <PlanType Value="WANTMASK_UNKNOWN" />
+                <PlanComments Value="" />
+              </DMSSchemaEntity_Table>
+            </SchemaTables>
+            <ExcludedTables />
+            <SchemaIndexes>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="PK_AppLogger" />
+                  <IndexTableName Value="AppLogger" />
+                  <IsUnique Value="True" />
+                  <IsPrimaryKey Value="True" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="LogDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="datetime2" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="ArticlePaymentPK" />
+                  <IndexTableName Value="ArticlePayment" />
+                  <IsUnique Value="True" />
+                  <IsPrimaryKey Value="True" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ArticlePaymentKey" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="PK_Article" />
+                  <IndexTableName Value="Articles" />
+                  <IsUnique Value="True" />
+                  <IsPrimaryKey Value="True" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ArticlesID" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="Blog_Archive_PK" />
+                  <IndexTableName Value="Blog_Archive" />
+                  <IsUnique Value="True" />
+                  <IsPrimaryKey Value="True" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogArchiveID" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="BlogContentPK" />
+                  <IndexTableName Value="BlogContent" />
+                  <IsUnique Value="True" />
+                  <IsPrimaryKey Value="True" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogContentKey" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="PK_Blogs" />
+                  <IndexTableName Value="Blogs" />
+                  <IsUnique Value="True" />
+                  <IsPrimaryKey Value="True" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogID" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="PK_Contacts" />
+                  <IndexTableName Value="Contacts" />
+                  <IsUnique Value="True" />
+                  <IsPrimaryKey Value="True" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ContactsID" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="PK_Countries" />
+                  <IndexTableName Value="CountryCodes" />
+                  <IsUnique Value="True" />
+                  <IsPrimaryKey Value="True" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="CountryCode" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="nvarchar" />
+                        <OrdinalPosition Value="1" />
+                        <CharacterMaximumLength Value="4" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="CustomerPK" />
+                  <IndexTableName Value="customer" />
+                  <IsUnique Value="True" />
+                  <IsPrimaryKey Value="True" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="customerid" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="EventLogger_IDX" />
+                  <IndexTableName Value="EventLogger" />
+                  <IsUnique Value="False" />
+                  <IsPrimaryKey Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="LogDate" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="datetime2" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="LogUser" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="2" />
+                        <CharacterMaximumLength Value="200" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="EventLogger_IDXUser" />
+                  <IndexTableName Value="EventLogger" />
+                  <IsUnique Value="False" />
+                  <IsPrimaryKey Value="False" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="LogUser" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="varchar" />
+                        <OrdinalPosition Value="1" />
+                        <CharacterMaximumLength Value="200" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="EventLoggerPK" />
+                  <IndexTableName Value="EventLogger" />
+                  <IsUnique Value="True" />
+                  <IsPrimaryKey Value="True" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="LogId" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="MyTablePK" />
+                  <IndexTableName Value="MyTable" />
+                  <IsUnique Value="True" />
+                  <IsPrimaryKey Value="True" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="MyTableKey" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="RatingsPK" />
+                  <IndexTableName Value="Ratings" />
+                  <IsUnique Value="True" />
+                  <IsPrimaryKey Value="True" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="RatingKey" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="PK__RSSFeeds__DF1690F2C1F77AC5" />
+                  <IndexTableName Value="RSSFeeds" />
+                  <IsUnique Value="True" />
+                  <IsPrimaryKey Value="True" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="RSSFeedID" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="pk_Status" />
+                  <IndexTableName Value="Status" />
+                  <IsUnique Value="True" />
+                  <IsPrimaryKey Value="True" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="Statusid" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+              <DMSSchemaEntity_Index NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_Index>
+                  <N2KSQLServerEntity />
+                  <IndexName Value="PK_Users" />
+                  <IndexTableName Value="Users" />
+                  <IsUnique Value="True" />
+                  <IsPrimaryKey Value="True" />
+                  <N2KSQLServerCollection_Column>
+                    <DMSSchemaEntity_Column NS="DMS_Common" AS="DMSO">
+                      <N2KSQLServerEntity_Column>
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="UserID" />
+                        <IsNullable Value="True" />
+                        <IsIdentity Value="False" />
+                        <ColumnDefault Value="" />
+                        <DataType Value="int" />
+                        <OrdinalPosition Value="1" />
+                      </N2KSQLServerEntity_Column>
+                      <PlanType Value="WANTMASK_UNKNOWN" />
+                      <PlanComments Value="" />
+                    </DMSSchemaEntity_Column>
+                  </N2KSQLServerCollection_Column>
+                </N2KSQLServerEntity_Index>
+              </DMSSchemaEntity_Index>
+            </SchemaIndexes>
+            <ExcludedIndexes />
+            <SchemaForeignKeys>
+              <DMSSchemaEntity_ForeignKey NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_ForeignKey>
+                  <N2KSQLServerEntity />
+                  <FKChildConstraintName Value="BlogContent_Blogs_BlogID" />
+                  <FKChildSchemaName Value="dbo" />
+                  <FKChildTableName Value="BlogContent" />
+                  <FKParentConstraintName Value="unknown" />
+                  <FKParentSchemaName Value="dbo" />
+                  <FKParentTableName Value="Blogs" />
+                  <ForeignKeyIsDisabled Value="False" />
+                  <N2KSQLServerCollection_PickedColumnPair>
+                    <N2KSQLServerEntity_PickedColumnPair>
+                      <N2KSQLServerEntity />
+                      <OrdinalPosition Value="1" />
+                      <N2KSQLServerEntity_PickedColumn OBJNAME="PickedCol1">
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogID" />
+                        <ColumnFullDataType Value="&lt;unknown datatype&gt;" />
+                        <ColumnConversionWrapper Value="" />
+                        <ColumnConversionEnabled Value="False" />
+                        <OrdinalPosition Value="1" />
+                        <DataType Value="unknown" />
+                        <IsPseudoColumn Value="False" />
+                        <DisplayUndefinedTextIfDatatypeNotDefined Value="True" />
+                      </N2KSQLServerEntity_PickedColumn>
+                      <N2KSQLServerEntity_PickedColumn OBJNAME="PickedCol2">
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="BlogID" />
+                        <ColumnFullDataType Value="&lt;unknown datatype&gt;" />
+                        <ColumnConversionWrapper Value="" />
+                        <ColumnConversionEnabled Value="False" />
+                        <OrdinalPosition Value="1" />
+                        <DataType Value="unknown" />
+                        <IsPseudoColumn Value="False" />
+                        <DisplayUndefinedTextIfDatatypeNotDefined Value="True" />
+                      </N2KSQLServerEntity_PickedColumn>
+                    </N2KSQLServerEntity_PickedColumnPair>
+                  </N2KSQLServerCollection_PickedColumnPair>
+                </N2KSQLServerEntity_ForeignKey>
+              </DMSSchemaEntity_ForeignKey>
+              <DMSSchemaEntity_ForeignKey NS="DMS_Common" AS="DMSO">
+                <N2KSQLServerEntity_ForeignKey>
+                  <N2KSQLServerEntity />
+                  <FKChildConstraintName Value="Ratings_Articles_ArticlesID" />
+                  <FKChildSchemaName Value="dbo" />
+                  <FKChildTableName Value="Ratings" />
+                  <FKParentConstraintName Value="unknown" />
+                  <FKParentSchemaName Value="dbo" />
+                  <FKParentTableName Value="Articles" />
+                  <ForeignKeyIsDisabled Value="False" />
+                  <N2KSQLServerCollection_PickedColumnPair>
+                    <N2KSQLServerEntity_PickedColumnPair>
+                      <N2KSQLServerEntity />
+                      <OrdinalPosition Value="1" />
+                      <N2KSQLServerEntity_PickedColumn OBJNAME="PickedCol1">
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ArticlesID" />
+                        <ColumnFullDataType Value="&lt;unknown datatype&gt;" />
+                        <ColumnConversionWrapper Value="" />
+                        <ColumnConversionEnabled Value="False" />
+                        <OrdinalPosition Value="1" />
+                        <DataType Value="unknown" />
+                        <IsPseudoColumn Value="False" />
+                        <DisplayUndefinedTextIfDatatypeNotDefined Value="True" />
+                      </N2KSQLServerEntity_PickedColumn>
+                      <N2KSQLServerEntity_PickedColumn OBJNAME="PickedCol2">
+                        <N2KSQLServerEntity />
+                        <ColumnName Value="ArticlesID" />
+                        <ColumnFullDataType Value="&lt;unknown datatype&gt;" />
+                        <ColumnConversionWrapper Value="" />
+                        <ColumnConversionEnabled Value="False" />
+                        <OrdinalPosition Value="1" />
+                        <DataType Value="unknown" />
+                        <IsPseudoColumn Value="False" />
+                        <DisplayUndefinedTextIfDatatypeNotDefined Value="True" />
+                      </N2KSQLServerEntity_PickedColumn>
+                    </N2KSQLServerEntity_PickedColumnPair>
+                  </N2KSQLServerCollection_PickedColumnPair>
+                </N2KSQLServerEntity_ForeignKey>
+              </DMSSchemaEntity_ForeignKey>
+            </SchemaForeignKeys>
+            <SchemaTriggers />
+            <SchemaIndexWithTableLists />
+          </N2KSQLServerEntity_Login>
+        </DMSSchemaEntity_Login>
+        <IDColName Value="Data MaskerTmpIDCol" />
+        <PKNamePrefix Value="PK_DataMaskerTmp_" />
+        <StatsTabPrefix Value="DMSSTAT_" />
+        <StatsInTableDB Value="True" />
+        <StatsDatabaseName Value="" />
+        <StatsSchemaName Value="" />
+      </RuleController>
+      <TriggerMgrRule NS="DMS_Common" AS="DMSO">
+        <DMSRule>
+          <RuleBlock Value="00" />
+          <RuleNumber Value="0002" />
+          <RuleSubscript Value="-01" />
+          <IsDisabled Value="False" />
+          <IsBulk Value="False" />
+          <WantMultipleActiveResultSets Value="False" />
+          <IsManagedRule Value="False" />
+          <CommitFreq Value="1000" />
+          <SerializedParentRuleID Value="01-0001" />
+          <Description Value="" />
+          <ExpandedState Value="False" />
+          <ForceIsNullsOff Value="False" />
+          <UserSpecifiedRIDIndexEnabled Value="False" />
+          <UserSpecifiedRIDIndex Value="" />
+        </DMSRule>
+        <TriggerManagerActionType Value="DISABLE_TRIGGERS" />
+        <DMSRuleBindingList />
+      </TriggerMgrRule>
+      <TriggerMgrRule NS="DMS_Common" AS="DMSO">
+        <DMSRule>
+          <RuleBlock Value="99" />
+          <RuleNumber Value="0003" />
+          <RuleSubscript Value="-01" />
+          <IsDisabled Value="False" />
+          <IsBulk Value="False" />
+          <WantMultipleActiveResultSets Value="False" />
+          <IsManagedRule Value="False" />
+          <CommitFreq Value="1000" />
+          <SerializedParentRuleID Value="01-0001" />
+          <Description Value="" />
+          <ExpandedState Value="False" />
+          <ForceIsNullsOff Value="False" />
+          <UserSpecifiedRIDIndexEnabled Value="False" />
+          <UserSpecifiedRIDIndex Value="" />
+        </DMSRule>
+        <TriggerManagerActionType Value="ENABLE_TRIGGERS" />
+        <DMSRuleBindingList />
+      </TriggerMgrRule>
+      <RuleSubstitution NS="DMS_Common" AS="DMSO">
+        <DMSRule>
+          <RuleBlock Value="01" />
+          <RuleNumber Value="0004" />
+          <RuleSubscript Value="-01" />
+          <IsDisabled Value="False" />
+          <IsBulk Value="False" />
+          <WantMultipleActiveResultSets Value="False" />
+          <IsManagedRule Value="False" />
+          <CommitFreq Value="1000" />
+          <SerializedParentRuleID Value="01-0001" />
+          <Description Value="Mask Contacts" />
+          <ExpandedState Value="False" />
+          <ForceIsNullsOff Value="False" />
+          <UserSpecifiedRIDIndexEnabled Value="False" />
+          <UserSpecifiedRIDIndex Value="" />
+        </DMSRule>
+        <TargetTableName Value="Contacts" />
+        <WhereClauseAndSamplingContainer>
+          <WhereClause Value="where ..." />
+          <WhereClauseMode Value="Where_NotNullOrEmpty" />
+          <WantSamplePercent Value="False" />
+          <SamplePercentage Value="100.00" />
+          <WantRowLimit Value="False" />
+          <RowLimit Value="1000" />
+          <WantDistinctSet Value="False" />
+          <ForceInLineNullSkips Value="False" />
+        </WhereClauseAndSamplingContainer>
+        <RangeOptionsContainer>
+          <RangeClause Value="" />
+          <RangeLow Value="" />
+          <RangeHigh Value="" />
+        </RangeOptionsContainer>
+        <DMSPickedColumnAndDataSetCollection>
+          <DMSPickedColumnAndDataSet>
+            <N2KSQLServerEntity_PickedColumn>
+              <N2KSQLServerEntity />
+              <ColumnName Value="ContactFullName" />
+              <ColumnFullDataType Value="nvarchar(100)" />
+              <ColumnConversionWrapper Value="" />
+              <ColumnConversionEnabled Value="False" />
+              <OrdinalPosition Value="2" />
+              <DataType Value="nvarchar" />
+              <IsPseudoColumn Value="False" />
+              <DisplayUndefinedTextIfDatatypeNotDefined Value="True" />
+            </N2KSQLServerEntity_PickedColumn>
+            <DataSet_NAMFLX>
+              <UpperCaseText Value="False" />
+              <UniqueValuesOnly Value="False" />
+            </DataSet_NAMFLX>
+          </DMSPickedColumnAndDataSet>
+          <DMSPickedColumnAndDataSet>
+            <N2KSQLServerEntity_PickedColumn>
+              <N2KSQLServerEntity />
+              <ColumnName Value="PhoneWork" />
+              <ColumnFullDataType Value="nvarchar(25)" />
+              <ColumnConversionWrapper Value="" />
+              <ColumnConversionEnabled Value="False" />
+              <OrdinalPosition Value="3" />
+              <DataType Value="nvarchar" />
+              <IsPseudoColumn Value="False" />
+              <DisplayUndefinedTextIfDatatypeNotDefined Value="True" />
+            </N2KSQLServerEntity_PickedColumn>
+            <DataSet_TELAUS>
+              <InvalidChecksum Value="False" />
+              <DigitsOnly Value="True" />
+              <SpaceSeparation Value="False" />
+              <NoAreaCode Value="False" />
+              <WantCE Value="True" />
+              <WantSE Value="True" />
+              <WantNE Value="True" />
+              <WantCW Value="True" />
+              <WantDW Value="True" />
+            </DataSet_TELAUS>
+          </DMSPickedColumnAndDataSet>
+          <DMSPickedColumnAndDataSet>
+            <N2KSQLServerEntity_PickedColumn>
+              <N2KSQLServerEntity />
+              <ColumnName Value="PhoneMobile" />
+              <ColumnFullDataType Value="nvarchar(25)" />
+              <ColumnConversionWrapper Value="" />
+              <ColumnConversionEnabled Value="False" />
+              <OrdinalPosition Value="4" />
+              <DataType Value="nvarchar" />
+              <IsPseudoColumn Value="False" />
+              <DisplayUndefinedTextIfDatatypeNotDefined Value="True" />
+            </N2KSQLServerEntity_PickedColumn>
+            <DataSet_RDUSTL>
+              <InvalidChecksum Value="False" />
+              <DigitsOnly Value="True" />
+              <SpaceSeparation Value="False" />
+              <NoAreaCode Value="False" />
+            </DataSet_RDUSTL>
+          </DMSPickedColumnAndDataSet>
+          <DMSPickedColumnAndDataSet>
+            <N2KSQLServerEntity_PickedColumn>
+              <N2KSQLServerEntity />
+              <ColumnName Value="Address1" />
+              <ColumnFullDataType Value="nvarchar(128)" />
+              <ColumnConversionWrapper Value="" />
+              <ColumnConversionEnabled Value="False" />
+              <OrdinalPosition Value="5" />
+              <DataType Value="nvarchar" />
+              <IsPseudoColumn Value="False" />
+              <DisplayUndefinedTextIfDatatypeNotDefined Value="True" />
+            </N2KSQLServerEntity_PickedColumn>
+            <DataSet_STADDR>
+              <UpperCaseText Value="False" />
+              <NeverAbbreviate Value="False" />
+              <NamesOfStreetsOnly Value="False" />
+              <DataSetFilename Value="random_street_addr.dmds" />
+            </DataSet_STADDR>
+          </DMSPickedColumnAndDataSet>
+          <DMSPickedColumnAndDataSet>
+            <N2KSQLServerEntity_PickedColumn>
+              <N2KSQLServerEntity />
+              <ColumnName Value="Email" />
+              <ColumnFullDataType Value="nvarchar(256)" />
+              <ColumnConversionWrapper Value="" />
+              <ColumnConversionEnabled Value="False" />
+              <OrdinalPosition Value="11" />
+              <DataType Value="nvarchar" />
+              <IsPseudoColumn Value="False" />
+              <DisplayUndefinedTextIfDatatypeNotDefined Value="True" />
+            </N2KSQLServerEntity_PickedColumn>
+            <DataSet_EMADDR>
+              <UpperCase Value="False" />
+            </DataSet_EMADDR>
+          </DMSPickedColumnAndDataSet>
+          <DMSPickedColumnAndDataSet>
+            <N2KSQLServerEntity_PickedColumn>
+              <N2KSQLServerEntity />
+              <ColumnName Value="JoiningDate" />
+              <ColumnFullDataType Value="datetime" />
+              <ColumnConversionWrapper Value="" />
+              <ColumnConversionEnabled Value="False" />
+              <OrdinalPosition Value="9" />
+              <DataType Value="datetime" />
+              <IsPseudoColumn Value="False" />
+              <DisplayUndefinedTextIfDatatypeNotDefined Value="True" />
+            </N2KSQLServerEntity_PickedColumn>
+            <DataSet_DTCORR>
+              <LowBound Value="-53" />
+              <HighBound Value="65" />
+              <ZeroNotValid Value="False" />
+            </DataSet_DTCORR>
+          </DMSPickedColumnAndDataSet>
+          <DMSPickedColumnAndDataSet>
+            <N2KSQLServerEntity_PickedColumn>
+              <N2KSQLServerEntity />
+              <ColumnName Value="ModifiedDate" />
+              <ColumnFullDataType Value="datetime" />
+              <ColumnConversionWrapper Value="" />
+              <ColumnConversionEnabled Value="False" />
+              <OrdinalPosition Value="10" />
+              <DataType Value="datetime" />
+              <IsPseudoColumn Value="False" />
+              <DisplayUndefinedTextIfDatatypeNotDefined Value="True" />
+            </N2KSQLServerEntity_PickedColumn>
+            <DataSet_DTCORR>
+              <LowBound Value="-53" />
+              <HighBound Value="65" />
+              <ZeroNotValid Value="False" />
+            </DataSet_DTCORR>
+          </DMSPickedColumnAndDataSet>
+        </DMSPickedColumnAndDataSetCollection>
+      </RuleSubstitution>
+      <RuleSearchReplace NS="DMS_Common" AS="DMSO">
+        <DMSRule>
+          <RuleBlock Value="01" />
+          <RuleNumber Value="0005" />
+          <RuleSubscript Value="-01" />
+          <IsDisabled Value="False" />
+          <IsBulk Value="False" />
+          <WantMultipleActiveResultSets Value="True" />
+          <IsManagedRule Value="False" />
+          <CommitFreq Value="1000" />
+          <SerializedParentRuleID Value="01-0001" />
+          <Description Value="remove extra address info" />
+          <ExpandedState Value="False" />
+          <ForceIsNullsOff Value="False" />
+          <UserSpecifiedRIDIndexEnabled Value="False" />
+          <UserSpecifiedRIDIndex Value="" />
+        </DMSRule>
+        <TargetTableName Value="Contacts" />
+        <TargetColumnName Value="Address2" />
+        <WhereClauseAndSamplingContainer>
+          <WhereClause Value="where ..." />
+          <WhereClauseMode Value="Where_NotNullOrEmpty" />
+          <WantSamplePercent Value="False" />
+          <SamplePercentage Value="100.00" />
+          <WantRowLimit Value="False" />
+          <RowLimit Value="1000" />
+          <WantDistinctSet Value="False" />
+          <ForceInLineNullSkips Value="False" />
+        </WhereClauseAndSamplingContainer>
+        <DMSSeaRepOperationCollection>
+          <DMSSeaRepOperation_XOut>
+            <SeaRepOperationBase>
+              <IsEnabled Value="True" />
+            </SeaRepOperationBase>
+            <RepChar Value="x" />
+            <SelectAlpha Value="True" />
+            <SelectNumeric Value="True" />
+          </DMSSeaRepOperation_XOut>
+        </DMSSeaRepOperationCollection>
+      </RuleSearchReplace>
+      <RuleSearchReplace NS="DMS_Common" AS="DMSO">
+        <DMSRule>
+          <RuleBlock Value="01" />
+          <RuleNumber Value="0006" />
+          <RuleSubscript Value="-01" />
+          <IsDisabled Value="False" />
+          <IsBulk Value="False" />
+          <WantMultipleActiveResultSets Value="True" />
+          <IsManagedRule Value="False" />
+          <CommitFreq Value="1000" />
+          <SerializedParentRuleID Value="01-0001" />
+          <Description Value="remove extra address info" />
+          <ExpandedState Value="False" />
+          <ForceIsNullsOff Value="False" />
+          <UserSpecifiedRIDIndexEnabled Value="False" />
+          <UserSpecifiedRIDIndex Value="" />
+        </DMSRule>
+        <TargetTableName Value="Contacts" />
+        <TargetColumnName Value="Address3" />
+        <WhereClauseAndSamplingContainer>
+          <WhereClause Value="where ..." />
+          <WhereClauseMode Value="Where_NotNullOrEmpty" />
+          <WantSamplePercent Value="False" />
+          <SamplePercentage Value="100.00" />
+          <WantRowLimit Value="False" />
+          <RowLimit Value="1000" />
+          <WantDistinctSet Value="False" />
+          <ForceInLineNullSkips Value="False" />
+        </WhereClauseAndSamplingContainer>
+        <DMSSeaRepOperationCollection>
+          <DMSSeaRepOperation_XOut>
+            <SeaRepOperationBase>
+              <IsEnabled Value="True" />
+            </SeaRepOperationBase>
+            <RepChar Value="x" />
+            <SelectAlpha Value="True" />
+            <SelectNumeric Value="True" />
+          </DMSSeaRepOperation_XOut>
+        </DMSSeaRepOperationCollection>
+      </RuleSearchReplace>
+      <RuleSubstitution NS="DMS_Common" AS="DMSO">
+        <DMSRule>
+          <RuleBlock Value="01" />
+          <RuleNumber Value="0007" />
+          <RuleSubscript Value="-01" />
+          <IsDisabled Value="False" />
+          <IsBulk Value="False" />
+          <WantMultipleActiveResultSets Value="False" />
+          <IsManagedRule Value="False" />
+          <CommitFreq Value="1000" />
+          <SerializedParentRuleID Value="01-0001" />
+          <Description Value="" />
+          <ExpandedState Value="False" />
+          <ForceIsNullsOff Value="False" />
+          <UserSpecifiedRIDIndexEnabled Value="False" />
+          <UserSpecifiedRIDIndex Value="" />
+        </DMSRule>
+        <TargetTableName Value="Users" />
+        <WhereClauseAndSamplingContainer>
+          <WhereClause Value="where ..." />
+          <WhereClauseMode Value="Where_NotNullOrEmpty" />
+          <WantSamplePercent Value="False" />
+          <SamplePercentage Value="100.00" />
+          <WantRowLimit Value="False" />
+          <RowLimit Value="1000" />
+          <WantDistinctSet Value="False" />
+          <ForceInLineNullSkips Value="False" />
+        </WhereClauseAndSamplingContainer>
+        <RangeOptionsContainer>
+          <RangeClause Value="" />
+          <RangeLow Value="" />
+          <RangeHigh Value="" />
+        </RangeOptionsContainer>
+        <DMSPickedColumnAndDataSetCollection>
+          <DMSPickedColumnAndDataSet>
+            <N2KSQLServerEntity_PickedColumn>
+              <N2KSQLServerEntity />
+              <ColumnName Value="Username" />
+              <ColumnFullDataType Value="varchar(200)" />
+              <ColumnConversionWrapper Value="" />
+              <ColumnConversionEnabled Value="False" />
+              <OrdinalPosition Value="2" />
+              <DataType Value="varchar" />
+              <IsPseudoColumn Value="False" />
+              <DisplayUndefinedTextIfDatatypeNotDefined Value="True" />
+            </N2KSQLServerEntity_PickedColumn>
+            <DataSet_RWORDS>
+              <UpperCaseText Value="False" />
+              <UniqueValuesOnly Value="False" />
+            </DataSet_RWORDS>
+          </DMSPickedColumnAndDataSet>
+          <DMSPickedColumnAndDataSet>
+            <N2KSQLServerEntity_PickedColumn>
+              <N2KSQLServerEntity />
+              <ColumnName Value="FullName" />
+              <ColumnFullDataType Value="varchar(500)" />
+              <ColumnConversionWrapper Value="" />
+              <ColumnConversionEnabled Value="False" />
+              <OrdinalPosition Value="3" />
+              <DataType Value="varchar" />
+              <IsPseudoColumn Value="False" />
+              <DisplayUndefinedTextIfDatatypeNotDefined Value="True" />
+            </N2KSQLServerEntity_PickedColumn>
+            <DataSet_MFNAME>
+              <UpperCaseText Value="False" />
+              <UniqueValuesOnly Value="False" />
+            </DataSet_MFNAME>
+          </DMSPickedColumnAndDataSet>
+          <DMSPickedColumnAndDataSet>
+            <N2KSQLServerEntity_PickedColumn>
+              <N2KSQLServerEntity />
+              <ColumnName Value="modifieddate" />
+              <ColumnFullDataType Value="datetime" />
+              <ColumnConversionWrapper Value="" />
+              <ColumnConversionEnabled Value="False" />
+              <OrdinalPosition Value="5" />
+              <DataType Value="datetime" />
+              <IsPseudoColumn Value="False" />
+              <DisplayUndefinedTextIfDatatypeNotDefined Value="True" />
+            </N2KSQLServerEntity_PickedColumn>
+            <DataSet_DTCORR>
+              <LowBound Value="-53" />
+              <HighBound Value="65" />
+              <ZeroNotValid Value="False" />
+            </DataSet_DTCORR>
+          </DMSPickedColumnAndDataSet>
+          <DMSPickedColumnAndDataSet>
+            <N2KSQLServerEntity_PickedColumn>
+              <N2KSQLServerEntity />
+              <ColumnName Value="modifiedby" />
+              <ColumnFullDataType Value="varchar(200)" />
+              <ColumnConversionWrapper Value="" />
+              <ColumnConversionEnabled Value="False" />
+              <OrdinalPosition Value="6" />
+              <DataType Value="varchar" />
+              <IsPseudoColumn Value="False" />
+              <DisplayUndefinedTextIfDatatypeNotDefined Value="True" />
+            </N2KSQLServerEntity_PickedColumn>
+            <DataSet_RWORDS>
+              <UpperCaseText Value="False" />
+              <UniqueValuesOnly Value="False" />
+            </DataSet_RWORDS>
+          </DMSPickedColumnAndDataSet>
+        </DMSPickedColumnAndDataSetCollection>
+      </RuleSubstitution>
+      <RuleRowInternal NS="DMS_Common" AS="DMSO">
+        <DMSRule>
+          <RuleBlock Value="01" />
+          <RuleNumber Value="0008" />
+          <RuleSubscript Value="-01" />
+          <IsDisabled Value="False" />
+          <IsBulk Value="False" />
+          <WantMultipleActiveResultSets Value="False" />
+          <IsManagedRule Value="False" />
+          <CommitFreq Value="1000" />
+          <SerializedParentRuleID Value="01-0007" />
+          <Description Value="synch nt auth" />
+          <ExpandedState Value="False" />
+          <ForceIsNullsOff Value="False" />
+          <UserSpecifiedRIDIndexEnabled Value="False" />
+          <UserSpecifiedRIDIndex Value="" />
+        </DMSRule>
+        <TargetTableName Value="Users" />
+        <TargetColumnName Value="NTAuthAccount" />
+        <ReplacementClause Value="'mydomain\\'+ username" />
+        <UseFastSinglePass Value="False" />
+        <WhereClauseAndSamplingContainer>
+          <WhereClause Value="where ..." />
+          <WhereClauseMode Value="Where_NotNullOrEmpty" />
+          <WantSamplePercent Value="False" />
+          <SamplePercentage Value="100.00" />
+          <WantRowLimit Value="False" />
+          <RowLimit Value="1000" />
+          <WantDistinctSet Value="False" />
+          <ForceInLineNullSkips Value="False" />
+        </WhereClauseAndSamplingContainer>
+        <RangeOptionsContainer>
+          <RangeClause Value="" />
+          <RangeLow Value="" />
+          <RangeHigh Value="" />
+        </RangeOptionsContainer>
+        <DMSPickedParamAndDataSetCollection>
+          <DMSPickedParamAndDataSet>
+            <N2KSQLServerEntity_PickedParam>
+              <N2KSQLServerEntity />
+              <ParamNumber Value="1" />
+              <ParamName Value="DMSPARAM1" />
+            </N2KSQLServerEntity_PickedParam>
+            <DataSetBase />
+          </DMSPickedParamAndDataSet>
+        </DMSPickedParamAndDataSetCollection>
+      </RuleRowInternal>
+    </DMSRuleBindingList>
+  </DMSSetContainer>
+</DMSSetContainer_MaskingSet>

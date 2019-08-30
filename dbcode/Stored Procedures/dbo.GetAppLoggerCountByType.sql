@@ -1,0 +1,11 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE PROCEDURE [dbo].[GetAppLoggerCountByType]
+  @type VARCHAR(20)
+AS
+    SELECT *
+	 FROM dbo.AppLogger
+	 WHERE LogCat = @type
+GO
