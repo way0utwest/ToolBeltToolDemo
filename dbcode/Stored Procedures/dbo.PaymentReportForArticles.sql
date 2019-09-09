@@ -2,23 +2,27 @@ SET QUOTED_IDENTIFIER ON
 GO
 SET ANSI_NULLS ON
 GO
-CREATE   PROCEDURE [dbo].[PaymentReportForArticles]
-   @startdate DATE
-   , @enddate date
+CREATE PROCEDURE [dbo].[PaymentReportForArticles]
+    @startdate DATE
+  , @enddate DATE
 AS
-SELECT ContactID,
-       COUNT(ArticleID) AS NumberOfArticles,
-       CASE
-           WHEN COUNT(ArticleID) > 10 THEN
-       (SUM(ArticlePaymentRate) + (SUM(ArticlePaymentRate) * .1))
-           WHEN COUNT(ArticleID) > 5 THEN
-       (SUM(ArticlePaymentRate) + (SUM(ArticlePaymentRate) * .05))
+SELECT ap.ContactID
+     , co.ContactFullName
+     , COUNT(ap.ArticleID) AS NumberOfArticles
+     , CASE
+           WHEN COUNT(ap.ArticleID) > 10 THEN
+     (SUM(ap.ArticlePaymentRate) + (SUM(ap.ArticlePaymentRate) * .1))
+           WHEN COUNT(ap.ArticleID) > 5 THEN
+     (SUM(ap.ArticlePaymentRate) + (SUM(ap.ArticlePaymentRate) * .05))
            ELSE
-               SUM(ArticlePaymentRate)
+               SUM(ap.ArticlePaymentRate)
        END AS paymenttotal
-FROM dbo.ArticlePayment
-WHERE PublishDate >= @startdate
-      AND PublishDate < @enddate
-GROUP BY ContactID;
+FROM dbo.ArticlePayment ap
+    INNER JOIN dbo.Contacts AS co
+        ON ap.ContactID = co.ContactsID
+WHERE ap.PublishDate >= @startdate
+      AND ap.PublishDate < @enddate
+GROUP BY ap.ContactID
+       , co.ContactFullName;
 
 GO
