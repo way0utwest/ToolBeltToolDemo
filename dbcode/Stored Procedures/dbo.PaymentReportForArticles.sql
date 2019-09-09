@@ -12,7 +12,7 @@ SELECT ap.ContactID
      , CASE
            WHEN COUNT(ap.ArticleID) > 10 THEN
      (SUM(ap.ArticlePaymentRate) + (SUM(ap.ArticlePaymentRate) * .1))
-           WHEN COUNT(ap.ArticleID) > 5 THEN
+           WHEN COUNT(ap.ArticleID) >= 5 THEN
      (SUM(ap.ArticlePaymentRate) + (SUM(ap.ArticlePaymentRate) * .05))
            ELSE
                SUM(ap.ArticlePaymentRate)
